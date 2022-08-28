@@ -39,10 +39,7 @@ gclient sync
 
 
 #######
-
-alias gm=/path/to/v8/tools/dev/gm.py
-gm android_arm64.release
-
+./tools/dev/gm.py android_arm64.release
 #######
 
 
