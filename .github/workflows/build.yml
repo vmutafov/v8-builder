@@ -63,7 +63,7 @@ jobs:
   #         ~/v8/v8/out.gn/arm.release/clang_*/gen-regexp-special-case
   #         ~/v8/v8/out.gn/arm.release/clang_*/mksnapshot
   #         ~/v8/v8/out.gn/arm.release/clang_*/torque
-  
+  #
   # build_android_x86_64:
   #   name: Android (x86-64)
   #   runs-on: ubuntu-18.04
@@ -84,7 +84,7 @@ jobs:
   #         ~/v8/v8/out.gn/x64.release/clang_*/gen-regexp-special-case
   #         ~/v8/v8/out.gn/x64.release/clang_*/mksnapshot
   #         ~/v8/v8/out.gn/x64.release/clang_*/torque
-
+  #
   # build_android_x86:
   #   name: Android (x86)
   #   runs-on: ubuntu-18.04
