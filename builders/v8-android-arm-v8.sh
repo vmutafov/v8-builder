@@ -32,8 +32,8 @@ echo "=====[ Fetching V8 ]====="
 fetch v8
 echo "target_os = ['android']" >> .gclient
 cd ~/v8/v8
-./build/install-build-deps-android.sh
 git checkout $VERSION
+./build/install-build-deps-android.sh
 gclient sync
 
 
@@ -42,13 +42,9 @@ python ./tools/dev/v8gen.py arm64.release -vv -- '
 target_os = "android"
 target_cpu = "arm64"
 v8_target_cpu = "arm64"
-is_component_build = true
-use_custom_libcxx = false
-v8_enable_i18n_support = true
-v8_use_external_startup_data = false
-symbol_level = 1
+is_component_build = false
 '
 ninja -C out.gn/arm64.release -t clean
 ninja -C out.gn/arm64.release v8_libplatform
 ninja -C out.gn/arm64.release v8
-cp ./third_party/android_ndk/sources/cxx-stl/llvm-libc++/libs/arm64-v8a/libc++_shared.so ./out.gn/arm64.release
+# cp ./third_party/android_ndk/sources/cxx-stl/llvm-libc++/libs/arm64-v8a/libc++_shared.so ./out.gn/arm64.release
