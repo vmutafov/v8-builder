@@ -32,7 +32,7 @@ echo "=====[ Fetching V8 ]====="
 fetch v8
 echo "target_os = ['android']" >> .gclient
 cd ~/v8/v8
-git checkout 10.3.174.20
+git checkout 10.5.218.7
 ./build/install-build-deps-android.sh
 gclient sync
 
